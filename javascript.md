@@ -1,4 +1,3 @@
-
 # Variáveis 
 ## Declaração de Variáveis
 
@@ -14,7 +13,6 @@ Para usar variáveis em JavaScript, primeiro precisamos criá-la, ou seja, ***de
 > * Sempre use **const** se o valor **não** deve ser alterado 
 > * Use **let** apenas se não puder usar const
 > * Use **var** apenas se você **deve** oferecer suporte a navegadores antigos.
-
 <br> 
 
 `Hoisting` 
@@ -29,7 +27,7 @@ console.log(x); // Output: undefined
 var x = 5;
 ```
 
-### VAR
+### VAR 
 Variáveis declaradas com var têm escopo de função ou escopo global. Elas permitem redeclaração e reatribuição de valores. Além disso, podem ser usadas antes de serem declaradas.
 
 ```javascript 
@@ -73,16 +71,63 @@ console.log(y); // Output: ReferenceError: y is not defined
 <br>
 
 ## Escopo
+
+Em JavaScript, escopo refere-se à visibilidade de uma variável ou como ela pode ser usada após ser declarada.
+
+O escopo de uma variável depende do local onde foi declarada e da palavra-chave usada (let, var, const).
+
+Os três tipos de escopo são:
+
+- escopo global
+- escopo de função
+- escopo de bloco.
+
 ### Global 
+O escopo global é o escopo mais amplo em JavaScript. As variáveis declaradas fora de qualquer função ou bloco de código têm escopo global e podem ser acessadas de qualquer lugar no código.
+
+
+```javascript
+var globalVariable = 10;
+
+function exampleFunction() {
+    console.log(globalVariable); // Acesso à variável global
+}
+
+exampleFunction(); // Saída: 10
+```
+
 ### Bloco 
+O escopo de bloco foi introduzido no ES6 (ECMAScript 2015) e refere-se ao escopo dentro de um bloco delimitado por chaves, como em *loops for e if*. Variáveis declaradas com `let` e `const` têm escopo de bloco e só podem ser acessadas dentro desse bloco.
+Este tipo de escopo ajuda a evitar vazamentos de variáveis e a manter o código mais seguro.
+
+```javascript
+if (true) {
+    let blockVariable = 30;
+    console.log(blockVariable); // Acesso à variável de bloco
+}
+
+console.log(blockVariable); // Erro: blockVariable is not defined
+```
+
 ### Função
+O escopo de função refere-se ao escopo dentro de uma função. As variáveis declaradas dentro de uma função só podem ser acessadas dentro dessa função, a menos que sejam declaradas globalmente.
+
+```javascript
+function exampleFunction() {
+    var localVariable = 20;
+    console.log(localVariable); // Acesso à variável local
+}
+
+exampleFunction(); // Saída: 20
+console.log(localVariable); // Erro: localVariable is not defined
+```
 
 ---
 
 # Tipos de Dados
 
-## Objeto 
-
+## Objeto ... 
+## Array  ... 
 
 ## Tipos  Primitivos
 
@@ -134,3 +179,12 @@ Sanciona um valor nulo.
 let nulo = null;
 console.log(nulo * 12); // Output 0
 ```
+<br>
+
+---
+# Operadores básicos 
+
+## Aritiméticos
+## De comparação
+## Lógicos 
+## Typeof
