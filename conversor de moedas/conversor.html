@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>conversor</title>
+
+    <style> 
+        *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+    text-align: center;
+    padding: 25px;
+}
+
+.container{
+    text-align: center;
+    margin: auto;
+    width: 30vw;
+    height: auto;
+    border: 1px solid lightgrey;
+    border-radius: 13px
+}
+
+.form{
+    padding: 25px;
+}
+
+.form > div{
+    width: 100%;
+    display: grid;
+    gap: 5px;
+    padding: 10px;
+    text-align: start;
+}
+
+select, input, button{
+    padding: 10px;
+    border-radius: 5px;
+    border: 0.5px solid lightgray;
+}
+
+
+button{
+    width: 100%;
+}
+
+#resultado{
+    text-align: center;
+    font-size: large;
+    color: green;
+}
+
+    </style>
+
+</head>
+
+<body>
+    <h1> Conversor De Moeda </h1>
+
+    <div class="container">
+        <div class="form"> 
+            <div>
+                <label for="moedaO"> Moeda de origem </label>
+                <select name="moedaO" id="moedaO">
+                    <option value="real"> Real </option>
+                    <option value="euro"> Euro </option>
+                    <option value="dolar"> Dolar </option>
+                </select>
+            </div>
+            <div>
+                <label for="moedaD"> Moeda de destino </label>
+                <select name="moedaD" id="moedaD">
+                    <option value="real"> Real </option>
+                    <option value="euro"> Euro </option>
+                    <option value="dolar"> Dólar </option>
+                </select>
+            </div>
+
+            <div>
+                <label for="quantidade"> quantidade </label>
+                <input type="number" name="quantidade" id="quantidade" step="0.001" >
+            </div>
+
+            <div> <button type="submit" onclick="converter()"> Converter </button> </div>
+
+        </div>
+
+        <div class="resultado" id="resultado"> 
+
+        </div>
+
+    </div>
+
+    <script> 
+        function converter() {
+            const origem = document.getElementById('moedaO').value;
+            const destino = document.getElementById('moedaD').value;
+            const quantidade = parseFloat(document.getElementById('quantidade').value);
+
+            let taxa = 0;
+
+            if (origem === 'real' && destino === 'euro') {
+                taxa = 0.18; 
+            } else if (origem === 'real' && destino === 'dolar') {
+                taxa = 0.20; 
+            } else if (origem === 'euro' && destino === 'real') {
+                taxa = 5.44;
+            } else if (origem === 'euro' && destino === 'dolar') {
+                taxa = 1.09;
+            } else if (origem === 'dolar' && destino === 'real') {
+                taxa = 4.99;
+            } else if (origem === 'dolar' && destino === 'euro') {
+                taxa = 0.92; 
+            }
+
+            const resultado = quantidade * taxa;
+
+            document.getElementById('resultado').innerText = `${quantidade}  ${origem.toUpperCase()} = ${resultado.toFixed(2)} ${destino.toUpperCase()}`;
+        }
+    </script>
+
+</body>
+
+</html>
