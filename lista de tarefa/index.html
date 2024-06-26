@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo List</title>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <img width="126px" height="48px" src="Logo.png" alt="todo">
+    </header>
+
+    <section class="create-task">
+        <input id="inpt-criar" class="inptcriar" type="text" placeholder="Adicione uma nova tarefa"> <button id="btn-criar" class="btncriar">
+            <strong>Criar</strong>
+            <i class="material-icons" style="font-size: x-large;">add_circle_outline</i>
+        </button>
+    </section>
+
+    <main>
+        <section class="task-stats">
+            <div>
+                <p id="criadas"><strong>Tarefas criadas</strong></p>
+                <span id="spn-criadas" class="contador"> 0 </span>
+            </div>
+           
+            <div>
+                <p id="concluidas"><strong>Concluídas</strong></p>
+                <span id="spn-concluidas" class="contador"> 0 </span>
+            </div>
+        </section>
+
+        <article class="tasks">
+            <p id="aviso">
+                <img width="56px" height="56px" src="pasta.png" alt=""> <br> <br>
+                <strong>Você ainda não tem tarefas cadastradas</strong>       <br>
+                Crie tarefas e organize seus itens a fazer
+            </p>
+        </article>
+    </main>
+</body>
+</html>

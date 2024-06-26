@@ -1,0 +1,214 @@
+:root{
+
+    /* produto */
+    --blue-dark:#1E6F9F;
+    --blue:#4EA8DE;
+    --purple-dark:#5E60CE;
+    --purple:#8284FA;
+
+    /* base  */
+    --gray-700:#0D0D0D;
+    --gray-600:#1A1A1A;
+    --gray-500:#262626;
+    --gray-400:#333333;
+    --gray-300:#808080;
+    --gray-200:#D9D9D9;
+    --gray-100:#F2F2F2;
+
+    /* feedback */
+    --danger:#E25858;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+    
+}
+
+
+body{
+    background-color: var(--gray-600);
+    text-align: center;
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    margin: auto;
+
+}
+
+header{
+    background-color: var(--gray-700);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+}
+
+.create-task{
+    display: flex;
+    justify-content: center;
+    margin-top: -3.5vh;
+    height: 15vh;
+    gap: 15px;
+
+}
+
+main{
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+.task-stats{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 20px;
+}
+
+.task-stats > div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1vw;
+}
+
+.tasks{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+article{
+    width: 50%;
+    border-top: 1px solid var(--gray-500);
+    border-radius: 10px;
+    padding-top: 20px;
+}
+
+/*  */
+
+h1{
+    color:var(--purple);
+}
+
+.inptcriar{
+    background-color:var(--gray-500);
+    color:var(--gray-300);
+    width: 44vw;
+    height: 7vh;
+    outline: none;
+    border: 1px solid;
+    border-color: var(--gray-700);
+    font-size: large;
+    padding-left: 1vw;
+    border-radius: 8px;
+}
+
+.inptcriar:focus {
+    color: var(--gray-200);
+    border-color: var(--purple);
+}
+
+.btncriar{
+    background-color: var(--blue-dark); 
+    color:var(--gray-100);
+    border-radius: 8px;
+    gap: 5px;
+    border: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:small;
+    width: 6vw;
+    height: 7vh;
+    padding: 20px;
+}
+
+.btncriar:hover{
+    background-color: var(--blue);
+    cursor:pointer;
+}
+
+.contador{
+    padding: 5px;
+    padding-inline: 5px;
+    background-color:var(--gray-400);
+    color:var(--gray-100);
+    text-align: center;
+    border-radius: 20px;
+    width: 2vw;
+    height: 3vh;
+    border: 0;
+}
+
+
+
+/*  */
+
+#spn-criadas{
+    background-color: var(--gray-400);
+    color: var(--gray-200);
+}
+
+#spn-concluidas{
+    background-color: var(--gray-400);
+    color: var(--gray-200);
+    width: 4vw;
+}
+
+#criadas{
+    color: var(--blue);
+}
+
+#concluidas{
+    color: var(--purple);
+}
+
+#aviso{
+    margin-top: 50px;
+    color: var(--gray-300);
+}
+
+/*  */
+
+.task-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--gray-500);
+    color: var(--gray-100);
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 8px;
+    width: 100%;
+}
+
+.task-checkbox {
+    margin-right: 10px;
+}
+
+.task-text {
+    flex-grow: 1;
+}
+
+.delete-task-btn {
+    background: none;
+    border: none;
+    color: var(--gray-300);
+    cursor: pointer;
+}
+
+.delete-task-btn:hover{
+    color: var(--danger);
+}
