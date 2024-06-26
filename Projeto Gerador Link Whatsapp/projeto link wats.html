@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="script.js" defer></script>
+    <title>Gerador de Link</title>
+</head>
+<body>
+    <div class="container">
+        <div class="infos">
+            <div class="head">
+                <h1>Gerador de Link</h1>
+                <i class="fa fa-whatsapp" style="font-size: 70px; color: darkgreen;"></i>
+            </div>
+            <div class="botoes">
+                <input class="telefone" type="tel" placeholder="Telefone" oninput="mascaraTelefone(this)" onclick="limparMensagem()">
+                <button class="gera" onclick="geraLink()" disabled><i class="material-icons" style="font-size: 30px;" >insert_link</i></button>
+                <button class="envia" onclick="abrirLink()" disabled><i class="material-icons" style="font-size: 30px;" >send</i></button>
+            </div>
+        </div>
+
+        <div class="resultado">
+            <input class="txtcopia" type="text" readonly onclick="copiarTexto(this)">
+            <p id="mensagem" style="display: none;">Clique no link para copiar</p>
+        </div>
+    </div>
+</body>
+</html>

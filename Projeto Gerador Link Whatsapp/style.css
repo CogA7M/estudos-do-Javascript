@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --primary-color: darkgreen;
+    --secondary-color: white;
+    --border-color: black;
+    --text-color: rgba(43, 42, 44, 0.562);
+    --size-phone: 20vw;
+    --height-phone: 9vh;
+    --radius: 10px;
+    --spacing: 5px;
+    --size-button: 5vw;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-color);
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: center;
+    background-color: var(--secondary-color);
+    border-radius: var(--radius);
+    width: 35vw;
+    height: 35vh;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.telefone, .gera, .envia {
+    border-radius: var(--radius);
+    font-family: 'Poppins', sans-serif;
+    height: var(--height-phone);
+    font-size: 20px;
+}
+
+.telefone {
+    padding-left: 1vw;
+    border: 2px solid var(--border-color);
+    color: var(--text-color);
+    width: var(--size-phone);
+    margin-right: var(--spacing);
+}
+
+.gera, .envia {
+    border: 0;
+    width: var(--size-button);
+    background-color: var(--primary-color);
+    color: white;
+    cursor: pointer;
+}
+
+button:hover{
+    border: 3px solid black;
+}
+
+
+.botoes {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing);
+    margin-top: 20px;
+    width: 100%; 
+}
+
+.resultado {
+    display: none;
+    background-color: var(--secondary-color);
+}
+
+.resultado.mostrar {
+    display: block;
+}
+
+.head {
+    height: 10vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1, i {
+    margin: 1vw;
+}
+
+.txtcopia {
+    user-select: none;  /* Desabilitar a seleção do texto */
+    width: 31vw;
+    padding: 10px;
+    font-size: 20px;
+    margin-right: var(--spacing);
+    border: 2px solid var(--border-color);
+    border-radius: var(--radius);
+    font-family: 'Poppins', sans-serif; 
+}
+
+/* Responsividade  */
+
+@media screen and (max-width: 800px){
+    .container {
+        display: flex;
+        background-color: var(--secondary-color);
+        border-radius: var(--radius);
+        width: 70vw;
+        height: 70vh;
+        padding: 2vh;
+    }
+
+    .head{
+        height: 25vh;
+    }
+
+    .botoes{
+        width: 100%;
+        height: 20vh;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 3vh; 
+
+    }
+
+    .telefone {
+        border: 2px solid var(--border-color);
+        color: var(--tel-color);
+        width: 65vw;
+        margin-right: var(--spacing);
+        font-size: 20px;
+        padding-left: 1vw;
+    }
+
+    .gera, .envia {
+        border: 0;
+        border-radius: 10px;
+        width: 25vw;
+        background-color: var(--primary-color);
+        color: white;
+    }
+
+    .resultado{
+        display: none;
+        font-size: 15px;
+    }
+
+    .txtcopia{
+        border: 2px solid var(--border-color);
+        color: var(--tel-color);
+        width: 60vw;
+        margin-right: var(--spacing);
+        font-size: 14px;
+        padding-left: 1vw;
+    }
+
+    .head{
+        display: flex;
+        flex-direction: column;
+    }
+
+}
